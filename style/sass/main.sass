@@ -1,2 +1,147 @@
-h1
-    color: red
+/*** FONTS ***/
+@font-face 
+    font-famiy: Poppins 
+    src: url('assets/fonts/Poppins-Regular.ttf')
+ 
+/*** VARIABLES ***/
+
+//primary colors
+$red: hsl(0,100%,74%)
+$green: hsl(154,59%,51%)
+$white: hsl(100%,100%,100%)
+
+// accent colors
+$blue: hsl(248, 32%, 49%)
+
+// neutral colors
+$darkBlue: hsl(249,10%,26%)
+$grayishBlue: hsl(246,25%,77%)
+
+/*** MOBILE FIRST ***/
+* 
+    margin: 0
+    padding: 0
+    font-size: 16px
+    box-sizing: border-box
+    font-family: Poppins
+    color: $white
+    line-height: 180%
+
+
+html, body 
+    width: 100%
+    height: 100vh
+    min-height: 500px
+
+body
+    background: $red url('../../assets/images/bg-intro-mobile.png') repeat center
+
+.container
+    width: 90%
+    max-width: 375px
+    margin:  0 auto
+
+.textContainer
+    padding: 0 6.705%
+    margin-bottom: 18.77%
+    margin-top: 26.81%
+
+.textContainer
+    article
+        text-align: center
+        h1
+            font-size: 1.375rem
+            margin-bottom: 9.24%
+            font-weight: 700
+        p
+            font-size: 1rem
+            font-weight: 500
+
+.formContainer
+    padding: 6.705%
+
+.form--tryFree
+    background-color: $blue
+    padding: 1em 0
+    border-radius: 10px
+    margin-bottom: 7.74%
+    p
+        margin: 0 6.705%
+        text-align: center
+
+.form--contaienr
+    border-radius: 10px
+    background-color: $white 
+    padding: 6.705%
+    form 
+        padding: 6.705%
+        div
+            margin-bottom: 6.705%
+            input
+                width: 100%
+                height: 55px
+                padding-left: 8%
+                color: $darkBlue
+                font-size: 0.75rem
+                font-weight: 500
+
+    input[type="submit"]
+        width: 100%
+        background-color: $green
+        height: 55px
+        border-radius: 10px
+        border: none
+        font-weight: 500
+        cursor: pointer
+        margin-bottom: 6.705%
+    p
+        color: $grayishBlue
+        font-size: 0.75rem
+        text-align: center
+        strong
+            color: $red
+            font-size: 0.75rem
+
+.errMsg
+    display: block
+    margin-top: 3%
+    font-size: 0.75rem
+    color: $red
+    font-weight: 400
+    text-align: right
+
+/*** LARGE SCREENS ***/
+@media screen and (min-width: 768px)
+    body
+        background: $red url('../../assets/images/bg-intro-desktop.png') repeat center
+    
+    .container
+        max-width: 1440px
+        width: 90%
+        height: 100%
+        display: flex
+        align-items: center
+
+    .textContainer, .formContainer
+        width: 50%
+    
+    .textContainer
+        margin: 0
+        article
+            h1
+                margin-bottom: 7.6%
+                font-size: 2.25rem
+            h1, p
+                text-align: left
+                
+    .form--tryFree
+        p
+            margin: 0 4.750%
+            text-align: center
+
+    .form--contaienr
+        form 
+            padding: 0
+        input[type="submit"]
+            margin-bottom: 4.750%
+      
